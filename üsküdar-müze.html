@@ -48,10 +48,10 @@
         <div class="paragraf-1">
           <p>
             <strong>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
-              incidunt iusto perspiciatis, recusandae sunt, nam nihil optio
-              consectetur laudantium vitae illo ratione soluta, corrupti
-              consequuntur. Nostrum consectetur quia quidem sint!
+              Rıfat Ilgaz tarafından yazılan Hababam sınıfı <br>  kitabından esinlenilerek 
+              1975 yılında vizyona <br> giren  filmin çekildiği okul, müze olarak hizmet vermektedir.
+              Ünlü oyuncuların balmumu heykellleri ile ziyaretçileri büyüleyen müzeye 
+              yanda bulunan haritalardan erişebilirsiniz.
             </strong>
           </p>
         </div>
@@ -65,17 +65,18 @@
       <div class="col1">
         <div class="resim">
           <img
-            src="img/beylerbeyisarayi.jpg"
-            style="height: 300px; max-width: 450px"
-          />
+          class="sa"
+          src="img/camlicakulesi.jpg"
+          style="height: 302px; max-width: 455px"
+      />
         </div>
         <div class="paragraf-1">
           <p>
             <strong>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
-              incidunt iusto perspiciatis, recusandae sunt, nam nihil optio
-              consectetur laudantium vitae illo ratione soluta, corrupti
-              consequuntur. Nostrum consectetur quia quidem sint!
+              II. Selim'in kızı Gevher Sultan'ın sarayının bulundugu yere 
+              daha sonradan Şevkabad Kasrı ve Ferahabad yalısı yaptırılmıştır.
+              Son halini Sultan Abdülaziz tarafından 1861-1865 yıllarında Beylerbeyi Sarayı adıyla 
+              mimar Sarkis Balyan öncülüğünde bitirilen saray, günümüzde müze olarak gezilebilmektedir.
             </strong>
           </p>
         </div>
@@ -88,15 +89,18 @@
       </div>
       <div class="col1">
         <div class="resim">
-          <img src="img/imoga.jpg" style="height: 302px; max-width: 455px" />
+          <img
+              class="card-img-top"
+              src="img/kapalicarsi.jpg"
+              style="height: 302px; max-width: 455px"
+          />
         </div>
         <div class="paragraf-1">
           <p>
             <strong>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
-              incidunt iusto perspiciatis, recusandae sunt, nam nihil optio
-              consectetur laudantium vitae illo ratione soluta, corrupti
-              consequuntur. Nostrum consectetur quia quidem sint!
+              Süleyman Saim Tekcan tarafından, özgün baskının ne olduğu bilincinin oluşturulması, 
+              yerleştirilmesi ve sanat izleyicisine özgün baskıyı yansıtmayı amaçlayarak IMOGA kurulmuştur.
+              Bulundukları binada 2004'ten berri hizmet vermektedirler
             </strong>
           </p>
         </div>
@@ -124,5 +128,134 @@
       <div class="telifhakki">Copyright © 2022 ~ paradoksgezi.com</div>
     </section>
     <!--footer end-->
+    <script>
+      var models = [
+  {
+    name: "Çamlıca Kulesi",
+    image: "img/kuzguncuk",
+    link: "üsküdar.html",
+  },
+  {
+    name: "Galata Köprüsü",
+    image: "img/kuzguncuk2.jpg",
+    link: "eminönü.html",
+  },
+  {
+    name: "Galata Kulesi",
+    image: "img/kizkulesi.jpg",
+    link: "beyoğlu.html",
+  },
+];
+
+var index = 0;
+var slaytCount = models.length;
+var interval;
+
+var settings = {
+  duration: "1500",
+  random: false,
+};
+
+init(settings);
+
+function init(settings) {
+  var prev;
+  interval = setInterval(function () {
+    if (settings.random) {
+      // random index
+      do {
+        index = Math.floor(Math.random() * slaytCount);
+      } while (index == prev);
+      prev = index;
+    } else {
+      // artan index
+      if (slaytCount == index + 1) {
+        index = -1;
+      }
+      showSlide(index);
+      console.log(index);
+      index++;
+    }
+    showSlide(index);
+  }, settings.duration);
+}
+
+function showSlide(i) {
+  index = i;
+
+  if (i < 0) {
+    index = slaytCount - 1;
+  }
+  if (i >= slaytCount) {
+    index = 0;
+  }
+
+  document
+    .querySelector(".card-img-top")
+    .setAttribute("src", models[index].image);
+}
+//
+var model = [
+  {
+    image: "img/camlicakulesi.jpg",
+  },
+  {
+    image: "img/galatakopru.jpg",
+  },
+  {
+    image: "img/galatakulesi.jpg", 
+  },
+];
+
+var indexx = 0;
+var slaytCountt = model.length;
+var interval;
+
+var settings = {
+  duration: "1500",
+  random: false,
+};
+
+init(settings);
+
+function init(settings) {
+  var prev;
+  interval = setInterval(function () {
+    if (settings.random) {
+      // random index
+      do {
+        indexx = Math.floor(Math.random() * slaytCountt);
+      } while (indexx == prev);
+      prev = indexx;
+    } else  {
+      // artan index
+      if (slaytCountt == indexx + 1) {
+        indexx = -1;
+      }
+      showSlide(indexx);
+      console.log(indexx);
+      indexx++;
+    }
+    showSlide(indexx);
+  }, settings.duration);
+}
+
+function showSlide(i) {
+  indexx = i;
+
+  if (i < 0) {
+    indexx = slaytCountt - 1;
+  }
+  if (i >= slaytCountt) {
+    indexx = 0;
+  }
+
+  document
+    .querySelector(".sa")
+    .setAttribute("src", model[indexx].image);
+}
+
+
+    </script>
   </body>
 </html>
