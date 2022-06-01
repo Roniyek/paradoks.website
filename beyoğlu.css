@@ -11,7 +11,6 @@ html {
   scroll-behavior: smooth;
 }
 * {
-  /*bu kod tüm sayfaya etki ediyor*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,6 +20,7 @@ html {
   transition: 0.2s ease;
 }
 body {
+  background-color: beige;
   background-size: cover;
   font-family: "popins", sans-serif;
   height: 100vh;
@@ -35,18 +35,13 @@ a {
 }
 
 /*Header start*/
-.logo img {
-  /*logo tasarımı yaptık*/
-  border: 2px solid rgb(97, 222, 247);
-  width: 90px;
-  height: 90px;
-  border-radius: 999rem;
-  box-shadow: 0px 0px 17px -2px rgb(0, 0, 0, 0.75);
+header {
+  height: 100px;
+  border-bottom: 2px solid #fff;
 }
 header {
-  /*menü kısmı tasarlandı*/
   height: 100px;
-  border-bottom: 2px solid #d5f0eafd;
+  border-bottom: 2px solid rgba(248, 248, 248, 0.6);
   padding: 0 7%;
   align-items: center;
   display: flex;
@@ -65,7 +60,7 @@ header nav .logo a {
   text-decoration: none;
   font-size: 25px;
   font-weight: 700;
-  color: rgba(240, 216, 146, 0.384);
+  color: rgba(240, 238, 232, 0.651);
 }
 nav ul {
   list-style: none;
@@ -74,6 +69,7 @@ nav ul {
 }
 nav ul a {
   text-decoration: none;
+  color: #706e66;
 }
 nav .header-menu {
   display: flex;
@@ -85,6 +81,8 @@ nav .header-menu {
   color: #706e66;
   font-size: 1rem;
   margin: 0 1rem;
+  position: relative;
+  left: 280px;
 }
 .menu ul li a:hover {
   border-color: var(--black-color);
@@ -93,58 +91,84 @@ nav .header-menu {
   color: var(--black-color);
 }
 /*header end*/
-
 /*article start*/
-.icerik {
-  /*slaytın pozisyonu ayarlandı*/
-  position: relative;
-  top: 30px;
-  left: 85px;
-  width: 88%;
-  text-align: center;
-}
 
-.article-list {
-  /*Yan sitelere açılan linkli logoların tasarımı yapıldı*/
+.col1 {
   display: flex;
-  column-gap: 35px;
-  list-style: none;
+  border: 0.5px solid beige;
+  align-items: center;
+  margin: 20px;
+  border-radius: 18px;
+  background-color: #c7f1effd;
+  box-shadow: 0px 0px 17px -2px rgb(0, 0, 0, 0.75);
+}
+.başlık h3 {
+  color: #706e66;
+  font-size: 26px;
   position: relative;
-  top: 45px;
-  left: 140px;
-  width: 50%;
+  right: -15px;
+  top: 12px;
 }
-.şile img {
+.paragraf-1 p {
+  color: #706e66;
+
   position: relative;
-  right: 36px;
+  left: 8px;
+  bottom: 75px;
+  font-size: 18px;
 }
-article .article-list a {
-  text-decoration: none;
-  color: white;
+.col1 .resim img {
+  position: relative;
+  top: 1px;
+  bottom: 1px solid beige;
+  border-bottom-left-radius: 18px;
+  border-top-left-radius: 18px;
 }
-li img {
-  /*ilçelere yönlendiren logolar tasarlandı*/
+.Harita-1 iframe {
+  bottom: 1px solid rgb(3, 3, 3);
+  border-bottom-right-radius: 18px;
+  border-top-right-radius: 18px;
+}
+#raka {
+  position: relative;
+  bottom: 105px;
+}
+#penin {
+  position: relative;
+  bottom: 106px;
+}
+#sapiens {
+  position: relative;
+  bottom: 86px;
+}
+#gala {
+  position: relative;
+  bottom: 45px;
+}
+#istiklal {
+  position: relative;
+  bottom: 97px;
+}
+#taksim {
+  position: relative;
+  bottom: 90px;
+}
+#miniturk {
+  position: relative;
+  bottom: 96px;
+}
+#pera {
+  position: relative;
+  bottom: 87px;
+}
+/*article end*/
+.logo img {
   border: 2px solid rgb(97, 222, 247);
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
   border-radius: 999rem;
   box-shadow: 0px 0px 17px -2px rgb(0, 0, 0, 0.75);
 }
-.card-link img {
-  border: 1px solid white;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-  box-shadow: 0px 0px 17px -2px rgb(0, 0, 0, 0.75);
-}
-.card-body {
-  border: 1px solid white;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
-  position: relative;
-  bottom: 2px;
-  box-shadow: 0px 0px 17px -2px rgb(0, 0, 0, 0.75);
-}
-/*article end*/
 /*footer start*/
 
 .footer {
@@ -158,8 +182,6 @@ li img {
   padding: 1rem 0;
 }
 .footer .share a {
-  /*sitenin alt kısmında bulanan iletişim bilgilerine
-  ait menü tasarlandi*/
   width: 2rem;
   height: 2rem;
   line-height: 2rem;

@@ -111,10 +111,46 @@ nav .header-menu {
 }
 .paragraf-1 p {
   color: #706e66;
-  text-align: center;
+  position: relative;
+  bottom: 45px;
+  left: 8px;
+  font-size: 18px;
+}
+#çamlıca {
+  position: relative;
+  top: -25px;
+}
+#kuzguncuk {
+  position: relative;
+  bottom: 98px;
+}
+#kız {
+  position: relative;
+  bottom: 68px;
+}
+#hababam {
   position: relative;
   bottom: 75px;
-  font-size: 20px;
+}
+#beyler {
+  position: relative;
+  bottom: 65px;
+}
+#imoga {
+  position: relative;
+  bottom: 75px;
+}
+#loki {
+  position: relative;
+  bottom: 82px;
+}
+#bridge {
+  position: relative;
+  bottom: 60px;
+}
+#sosyal {
+  position: relative;
+  bottom: 58px;
 }
 .col1 .resim img {
   position: relative;
@@ -127,7 +163,6 @@ nav .header-menu {
   bottom: 1px solid rgb(3, 3, 3);
   border-bottom-right-radius: 18px;
   border-top-right-radius: 18px;
-
 }
 /*article end*/
 .logo img {
